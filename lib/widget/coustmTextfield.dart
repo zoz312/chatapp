@@ -11,7 +11,7 @@ class customTextFeild extends StatelessWidget {
       obscureText: onjtyy!,
         validator: (value) {
           if (value!.isEmpty) {
-            return 'faild is required';
+            return 'faildi is required';
           }
         },
         onChanged: onchange,
