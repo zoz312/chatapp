@@ -76,8 +76,19 @@ class chatPage extends StatelessWidget {
                       },
                       decoration: InputDecoration(
                           hintText: 'Send Message',
-                          suffixIcon: Icon(  Icons.send,
-                            color: kPrimaryColor,),
+                          suffixIcon:IconButton(onPressed:(){
+                              massages.add({
+                          kMessage: controller.text,
+                          kCreatedAt: DateTime.now(),
+                          "id": email
+                        });
+                        controller.clear();
+                        _cont.animateTo(0,
+                            duration: Duration(milliseconds: 7),
+                            curve: Curves.bounceIn);
+                      
+                          }, icon:  Icon(  Icons.send,
+                            color: kPrimaryColor,)),
                           border: OutlineInputBorder(),
                           focusedBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(18),
